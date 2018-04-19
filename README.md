@@ -1,5 +1,5 @@
 # hxXmlAIJT - Haxe XML Array Index Join-Table
-This is a simple program that accepts an array of primary keys an returns an embeddable XML data source containing a join table.
+This is a simple program that accepts an array of primary keys and returns an embeddable XML data source containing a join table.
 This can be especially useful when you have to sort an existing recordset by an external parameter but do not want to add a new table or database.
 
 ### Gist of the idea
