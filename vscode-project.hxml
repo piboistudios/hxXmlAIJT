@@ -1,0 +1,20 @@
+#automatically generated do not edit
+#@date Wed Apr 18 2018 21:19:36 GMT-0500 (Central Daylight Time)
+-cp c:\haxe projects\hxxmlaijt\"src"\
+-main Main
+-java "bin/java"
+
+
+-cp c:\users\gabri\appdata\local\temp\b4e7ce0095a6d0e0fb3cddc7dc244e7fa1cf96b1
+--each
+
+--next
+-cp c:\haxe projects\hxxmlaijt\"src"\
+-main Main
+-cs "bin/cs"
+
+
+--next
+-cp c:\haxe projects\hxxmlaijt\"src"\
+-main Main
+-cpp "bin/cpp"

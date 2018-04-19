@@ -1,0 +1,13 @@
+-cp "src"
+-main Main
+-java "bin/java"
+
+--next
+-cp "src"
+-main Main
+-cs "bin/cs"
+
+--next
+-cp "src"
+-main Main
+-cpp "bin/cpp"

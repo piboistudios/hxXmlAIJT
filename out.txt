@@ -1,0 +1,10 @@
+<Query>
+	<XmlData>
+	<JT>
+	<jr index="0" PK="124159        "/>
+	<jr index="1" PK="145555        "/>
+	</JT>
+	</XmlData>
+	
+	</Query
+	>
