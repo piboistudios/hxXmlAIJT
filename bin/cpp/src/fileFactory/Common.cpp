@@ -8,8 +8,8 @@
 #include <fileFactory/Common.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_4195329db9385ba7_4_boot,"fileFactory.Common","boot",0xcaf3b775,"fileFactory.Common.boot","fileFactory/Common.hx",4,0x82b49f72)
 HX_LOCAL_STACK_FRAME(_hx_pos_4195329db9385ba7_5_boot,"fileFactory.Common","boot",0xcaf3b775,"fileFactory.Common.boot","fileFactory/Common.hx",5,0x82b49f72)
+HX_LOCAL_STACK_FRAME(_hx_pos_4195329db9385ba7_6_boot,"fileFactory.Common","boot",0xcaf3b775,"fileFactory.Common.boot","fileFactory/Common.hx",6,0x82b49f72)
 namespace fileFactory{
 
 void Common_obj::__construct() { }
@@ -124,12 +124,12 @@ void Common_obj::__register()
 void Common_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_4195329db9385ba7_4_boot)
-HXDLIN(   4)		_hx_EOF = HX_("@$#!#@!@#$!@#~@#!@$!@$@#$!#$%!$#%!#$%!#$%!",8e,95,cd,09);
+            	HX_STACKFRAME(&_hx_pos_4195329db9385ba7_5_boot)
+HXDLIN(   5)		_hx_EOF = HX_("@$#!#@!@#$!@#~@#!@$!@$@#$!#$%!$#%!#$%!#$%!",8e,95,cd,09);
             	}
 {
-            	HX_GC_STACKFRAME(&_hx_pos_4195329db9385ba7_5_boot)
-HXDLIN(   5)		xmlFormatRegEx =  ::EReg_obj::__alloc( HX_CTX ,HX_("(<[.]+>)",e0,dd,6b,cb),HX_("i",69,00,00,00));
+            	HX_GC_STACKFRAME(&_hx_pos_4195329db9385ba7_6_boot)
+HXDLIN(   6)		xmlFormatRegEx =  ::EReg_obj::__alloc( HX_CTX ,HX_("(<[.]+>)",e0,dd,6b,cb),HX_("i",69,00,00,00));
             	}
 }
 

@@ -109,8 +109,6 @@
 	
     <Compile Include="src\EReg.cs"/>
 	
-    <Compile Include="src\fileFactory\InputTools.cs"/>
-	
     <Compile Include="src\cs\internal\HxObject.cs"/>
 	
     <Compile Include="src\cs\internal\Exceptions.cs"/>

@@ -49,9 +49,6 @@
 #ifndef INCLUDED_haxe_IMap
 #include <haxe/IMap.h>
 #endif
-#ifndef INCLUDED_fileFactory_InputTools
-#include <fileFactory/InputTools.h>
-#endif
 #ifndef INCLUDED_fileFactory_CSV
 #include <fileFactory/CSV.h>
 #endif
@@ -105,7 +102,6 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::io::Bytes_obj::__register();
 ::haxe::ds::StringMap_obj::__register();
 ::haxe::IMap_obj::__register();
-::fileFactory::InputTools_obj::__register();
 ::fileFactory::CSV_obj::__register();
 ::Type_obj::__register();
 ::Sys_obj::__register();

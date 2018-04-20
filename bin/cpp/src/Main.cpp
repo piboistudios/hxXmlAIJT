@@ -53,10 +53,9 @@ void Main_obj::main(){
 HXLINE(   5)		if ((::Sys_obj::args()->length == (int)0)) {
 HXLINE(   5)			return;
             		}
-HXLINE(   6)		::String input = ::Sys_obj::args()->__get((int)0);
-HXLINE(   7)		 ::sys::io::FileOutput out = ::sys::io::File_obj::write(HX_("out.xml",f7,3d,ce,b8),null());
-HXLINE(   8)		out->writeString(::haxe::xml::Printer_obj::print(::HxXmlAIJT_obj::run(::fileFactory::CSV_obj::run(input)),null()));
-HXLINE(   9)		out->close();
+HXLINE(   6)		 ::sys::io::FileOutput out = ::sys::io::File_obj::write(HX_("out.xml",f7,3d,ce,b8),null());
+HXLINE(   7)		out->writeString(::haxe::xml::Printer_obj::print(::HxXmlAIJT_obj::run(::fileFactory::CSV_obj::run(::Sys_obj::args()->__get((int)0))),null()));
+HXLINE(  12)		out->close();
             	}
 
 

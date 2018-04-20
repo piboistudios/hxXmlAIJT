@@ -437,8 +437,6 @@ M EReg
 C EReg
 M System.Reflection.Emit.AssemblyBuilder
 M System.Math
-M fileFactory.InputTools
-C fileFactory.InputTools
 M cs.system.security.policy.PolicyStatementAttribute
 M System.Diagnostics.ProcessThreadCollection
 M System.Attribute

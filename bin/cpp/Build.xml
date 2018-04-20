@@ -74,13 +74,6 @@
   <file name="src/haxe/IMap.cpp" >
    <depend name="include/haxe/IMap.h"/>
   </file>
-  <file name="src/fileFactory/InputTools.cpp" >
-   <depend name="include/fileFactory/Common.h"/>
-   <depend name="include/fileFactory/InputTools.h"/>
-   <depend name="include/haxe/io/Eof.h"/>
-   <depend name="include/haxe/io/Input.h"/>
-   <depend name="include/sys/io/FileInput.h"/>
-  </file>
   <file name="src/fileFactory/Common.cpp" >
    <depend name="include/EReg.h"/>
    <depend name="include/fileFactory/Common.h"/>
@@ -89,7 +82,7 @@
    <depend name="include/Type.h"/>
    <depend name="include/fileFactory/CSV.h"/>
    <depend name="include/fileFactory/Common.h"/>
-   <depend name="include/fileFactory/InputTools.h"/>
+   <depend name="include/haxe/io/Eof.h"/>
    <depend name="include/haxe/io/Input.h"/>
    <depend name="include/sys/io/File.h"/>
    <depend name="include/sys/io/FileInput.h"/>

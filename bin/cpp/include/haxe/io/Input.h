@@ -54,9 +54,6 @@ class HXCPP_CLASS_ATTRIBUTES Input_obj : public hx::Object
 		virtual int readByte();
 		::Dynamic readByte_dyn();
 
-		::String readUntil(int end);
-		::Dynamic readUntil_dyn();
-
 		::String readLine();
 		::Dynamic readLine_dyn();
 

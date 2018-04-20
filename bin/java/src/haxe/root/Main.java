@@ -42,12 +42,10 @@ public class Main extends haxe.lang.HxObject
 		}
 		
 		//line 6 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
-		java.lang.String input = haxe.root.Sys.args().__get(0);
-		//line 7 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
 		sys.io.FileOutput out = sys.io.File.write("out.xml", null);
-		//line 8 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
-		out.writeString(haxe.xml.Printer.print(haxe.root.HxXmlAIJT.run(fileFactory.CSV.run(input)), null));
-		//line 9 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
+		//line 7 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
+		out.writeString(haxe.xml.Printer.print(haxe.root.HxXmlAIJT.run(fileFactory.CSV.run(haxe.root.Sys.args().__get(0))), null));
+		//line 12 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx"
 		out.close();
 	}
 	

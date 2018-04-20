@@ -34,7 +34,6 @@ src\cs\Lib.cs
 src\sys\io\FileInput.cs
 src\cs\io\NativeOutput.cs
 src\EReg.cs
-src\fileFactory\InputTools.cs
 src\cs\internal\HxObject.cs
 src\cs\internal\Exceptions.cs
 src\cs\internal\FieldLookup.cs

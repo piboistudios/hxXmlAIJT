@@ -30,9 +30,8 @@ public class Main : global::haxe.lang.HxObject {
 			return;
 		}
 		
-		string input = global::haxe.lang.Runtime.toString(global::Sys.args()[0]);
 		global::sys.io.FileOutput @out = global::sys.io.File.write("out.xml", default(global::haxe.lang.Null<bool>));
-		@out.writeString(global::haxe.xml.Printer.print(global::HxXmlAIJT.run(global::fileFactory.CSV.run(input)), default(global::haxe.lang.Null<bool>)));
+		@out.writeString(global::haxe.xml.Printer.print(global::HxXmlAIJT.run(global::fileFactory.CSV.run(global::haxe.lang.Runtime.toString(global::Sys.args()[0]))), default(global::haxe.lang.Null<bool>)));
 		@out.close();
 	}
 	

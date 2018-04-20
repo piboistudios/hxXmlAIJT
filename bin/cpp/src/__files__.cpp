@@ -28,7 +28,6 @@ const char *__hxcpp_all_files[] = {
 "Main.hx",
 "fileFactory/CSV.hx",
 "fileFactory/Common.hx",
-"fileFactory/InputTools.hx",
 #endif
  0 };
 
@@ -58,7 +57,6 @@ const char *__hxcpp_all_files_fullpath[] = {
 "C:\\Haxe Projects\\hxXmlAIJT\\Main.hx",
 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx",
 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\Common.hx",
-"C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\InputTools.hx",
 #endif
  0 };
 
@@ -76,7 +74,6 @@ const char *__hxcpp_all_classes[] = {
 "Xml",
 "fileFactory.CSV",
 "fileFactory.Common",
-"fileFactory.InputTools",
 "haxe.ds.StringMap",
 "haxe.io.Bytes",
 "haxe.io.BytesBuffer",

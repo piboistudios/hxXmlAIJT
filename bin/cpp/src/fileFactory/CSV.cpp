@@ -10,8 +10,8 @@
 #ifndef INCLUDED_fileFactory_Common
 #include <fileFactory/Common.h>
 #endif
-#ifndef INCLUDED_fileFactory_InputTools
-#include <fileFactory/InputTools.h>
+#ifndef INCLUDED_haxe_io_Eof
+#include <haxe/io/Eof.h>
 #endif
 #ifndef INCLUDED_haxe_io_Input
 #include <haxe/io/Input.h>
@@ -23,7 +23,7 @@
 #include <sys/io/FileInput.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_762bea88314705c5_7_run,"fileFactory.CSV","run",0xd96effc3,"fileFactory.CSV.run","fileFactory/CSV.hx",7,0x1cc87059)
+HX_LOCAL_STACK_FRAME(_hx_pos_762bea88314705c5_6_run,"fileFactory.CSV","run",0xd96effc3,"fileFactory.CSV.run","fileFactory/CSV.hx",6,0x1cc87059)
 namespace fileFactory{
 
 void CSV_obj::__construct() { }
@@ -44,21 +44,40 @@ bool CSV_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 ::cpp::VirtualArray CSV_obj::run( ::Dynamic input){
-            	HX_STACKFRAME(&_hx_pos_762bea88314705c5_7_run)
-HXLINE(   8)		 ::Dynamic _file = null();
-HXDLIN(   8)		::cpp::VirtualArray out = ::cpp::VirtualArray_obj::__new();
+            	HX_STACKFRAME(&_hx_pos_762bea88314705c5_6_run)
+HXLINE(   7)		 ::Dynamic _file = null();
+HXDLIN(   7)		::cpp::VirtualArray out = ::cpp::VirtualArray_obj::__new();
+HXLINE(   8)		 ::sys::io::FileInput file = null();
 HXLINE(   9)		if (hx::IsEq( ::Type_obj::getClass(input),hx::ClassOf< ::String >() )) {
 HXLINE(  11)			_file = ::sys::io::File_obj::read(( (::String)(input) ),null());
+HXDLIN(  11)			file = ( ( ::sys::io::FileInput)(_file) );
             		}
-HXLINE(  13)		 ::sys::io::FileInput file = ( ( ::sys::io::FileInput)(_file) );
-HXLINE(  16)		while(true){
-HXLINE(  18)			::String pk = ::fileFactory::InputTools_obj::tryReadLine(file);
-HXLINE(  19)			if ((pk == ::fileFactory::Common_obj::_hx_EOF)) {
-HXLINE(  22)				return out;
+HXLINE(  14)		::String pk = HX_("",00,00,00,00);
+HXLINE(  15)		while(true){
+HXLINE(  17)			::String _hx_tmp;
+HXDLIN(  17)			try {
+            				HX_STACK_CATCHABLE( ::haxe::io::Eof, 0);
+HXLINE(  19)				pk = file->readLine();
+HXLINE(  17)				_hx_tmp = pk;
             			}
-HXLINE(  24)			out->push(pk);
+            			catch( ::Dynamic _hx_e){
+            				if (_hx_e.IsClass<  ::haxe::io::Eof >() ){
+            					HX_STACK_BEGIN_CATCH
+            					 ::haxe::io::Eof e = _hx_e;
+HXLINE(  23)					pk = ::fileFactory::Common_obj::_hx_EOF;
+HXLINE(  17)					_hx_tmp = pk;
+            				}
+            				else {
+            					HX_STACK_DO_THROW(_hx_e);
+            				}
+            			}
+HXLINE(  15)			if (!((_hx_tmp != ::fileFactory::Common_obj::_hx_EOF))) {
+HXLINE(  15)				goto _hx_goto_0;
+            			}
+HXLINE(  27)			out->push(pk);
             		}
-HXLINE(  16)		return null();
+            		_hx_goto_0:;
+HXLINE(  29)		return out;
             	}
 
 

@@ -176,8 +176,6 @@ M java.lang.reflect.Method
 M java.nio.channels.InterruptibleChannel
 M haxe.root.EReg
 C haxe.root.EReg
-M fileFactory.InputTools
-C fileFactory.InputTools
 M haxe.Int32
 M java.nio.CharBuffer
 M haxe.lang.FieldLookup

@@ -8,9 +8,9 @@ public class Common extends haxe.lang.HxObject
 {
 	static
 	{
-		//line 4 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\Common.hx"
-		fileFactory.Common.EOF = "@$#!#@!@#$!@#~@#!@$!@$@#$!#$%!$#%!#$%!#$%!";
 		//line 5 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\Common.hx"
+		fileFactory.Common.EOF = "@$#!#@!@#$!@#~@#!@$!@$@#$!#$%!$#%!#$%!#$%!";
+		//line 6 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\Common.hx"
 		fileFactory.Common.xmlFormatRegEx = new haxe.root.EReg("(<[.]+>)", "i");
 	}
 	

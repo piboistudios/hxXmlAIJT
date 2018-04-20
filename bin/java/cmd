@@ -28,7 +28,6 @@ src/haxe/lang/StringExt.java
 src/haxe/lang/StringRefl.java
 src/sys/io/FileInput.java
 src/haxe/root/EReg.java
-src/fileFactory/InputTools.java
 src/haxe/lang/FieldLookup.java
 src/fileFactory/Common.java
 src/haxe/root/Sys.java

@@ -30,44 +30,6 @@ public class Input extends haxe.lang.HxObject
 	}
 	
 	
-	public java.lang.String readUntil(int end)
-	{
-		//line 164 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-		try 
-		{
-			//line 165 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-			haxe.io.BytesBuffer buf = new haxe.io.BytesBuffer();
-			//line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-			int last = 0;
-			//line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-			while (true)
-			{
-				//line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-				last = this.readByte();
-				//line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-				if ( ! ((( last != end ))) ) 
-				{
-					//line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-					break;
-				}
-				
-				//line 168 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-				buf.b.write(((int) (last) ));
-			}
-			
-			//line 169 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-			return buf.getBytes().toString();
-		}
-		catch (java.lang.Throwable typedException)
-		{
-			//line 164 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-			throw haxe.lang.HaxeException.wrap(typedException);
-		}
-		
-		
-	}
-	
-	
 	public java.lang.String readLine()
 	{
 		//line 178 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
@@ -192,22 +154,6 @@ public class Input extends haxe.lang.HxObject
 				}
 				
 				
-				case -1122843800:
-				{
-					//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-					if (field.equals("readUntil")) 
-					{
-						//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-						__temp_executeDef1 = false;
-						//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "readUntil")) );
-					}
-					
-					//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-					break;
-				}
-				
-				
 			}
 			
 			//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
@@ -261,22 +207,6 @@ public class Input extends haxe.lang.HxObject
 						__temp_executeDef1 = false;
 						//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
 						return this.readByte();
-					}
-					
-					//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-					break;
-				}
-				
-				
-				case -1122843800:
-				{
-					//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-					if (field.equals("readUntil")) 
-					{
-						//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-						__temp_executeDef1 = false;
-						//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"
-						return this.readUntil(((int) (haxe.lang.Runtime.toInt(dynargs.__get(0))) ));
 					}
 					
 					//line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Input.hx"

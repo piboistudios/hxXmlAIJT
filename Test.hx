@@ -5,8 +5,7 @@ class Test {
     static var closeXRegEx = ~/(<[\/][^<>]+>)/gi;
     static function indentAll(string:String, index = 0)
     {
-        var sip = new haxe.io.StringInput(string);
-        var line = "", returnString = "";
+        var sip = new haxe.io.StringInput(string), line = "", returnString = "";
         while(
             (try{
                 line = sip.readLine();

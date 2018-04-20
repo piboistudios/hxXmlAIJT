@@ -48,7 +48,9 @@ public class HxXmlAIJT extends haxe.lang.HxObject
 				//line 14 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
 				int i = _g1++;
 				//line 16 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
-				haxe.root.Xml pk = haxe.root.Xml.parse("<jr></jr>").firstElement();
+				haxe.root.Xml pk = null;
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
+				pk = haxe.root.Xml.parse("<jr></jr>").firstElement();
 				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
 				pk.set("index", haxe.root.Std.string(i));
 				//line 18 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
@@ -82,7 +84,9 @@ public class HxXmlAIJT extends haxe.lang.HxObject
 		}
 		
 		//line 21 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
-		haxe.root.Xml xmlData = haxe.root.Xml.createElement("XmlData");
+		haxe.root.Xml xmlData = null;
+		//line 22 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
+		xmlData = haxe.root.Xml.createElement("XmlData");
 		//line 22 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
 		xmlData.addChild(joinTable);
 		//line 23 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
@@ -92,11 +96,11 @@ public class HxXmlAIJT extends haxe.lang.HxObject
 	
 	public static haxe.root.Xml run(haxe.root.Array input)
 	{
-		//line 27 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
-		haxe.root.HxXmlAIJT.genOut();
 		//line 28 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
-		haxe.root.HxXmlAIJT.convertArray(input);
+		haxe.root.HxXmlAIJT.genOut();
 		//line 29 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
+		haxe.root.HxXmlAIJT.convertArray(input);
+		//line 30 "C:\\Haxe Projects\\hxXmlAIJT\\src\\HxXmlAIJT.hx"
 		return haxe.root.HxXmlAIJT.out;
 	}
 	

@@ -30,7 +30,8 @@ public class HxXmlAIJT : global::haxe.lang.HxObject {
 			int _g = ((int) (global::haxe.lang.Runtime.getField_f(input, "length", 520590566, true)) );
 			while (( _g1 < _g )) {
 				int i = _g1++;
-				global::Xml pk = global::Xml.parse("<jr></jr>").firstElement();
+				global::Xml pk = null;
+				pk = global::Xml.parse("<jr></jr>").firstElement();
 				pk.@set("index", global::Std.@string(i));
 				{
 					if (( ( pk.nodeType != global::Xml.Document ) && ( pk.nodeType != global::Xml.Element ) )) {
@@ -51,7 +52,8 @@ public class HxXmlAIJT : global::haxe.lang.HxObject {
 			
 		}
 		
-		global::Xml xmlData = global::Xml.createElement("XmlData");
+		global::Xml xmlData = null;
+		xmlData = global::Xml.createElement("XmlData");
 		xmlData.addChild(joinTable);
 		global::HxXmlAIJT.@out.addChild(xmlData);
 	}

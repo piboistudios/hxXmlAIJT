@@ -13,7 +13,7 @@ public class CSV extends haxe.lang.HxObject
 	
 	public CSV()
 	{
-		//line 5 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		//line 4 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 		fileFactory.CSV.__hx_ctor_fileFactory_CSV(this);
 	}
 	
@@ -25,35 +25,85 @@ public class CSV extends haxe.lang.HxObject
 	
 	public static haxe.root.Array run(java.lang.Object input)
 	{
-		//line 8 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		//line 7 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 		java.lang.Object _file = null;
-		//line 8 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		//line 7 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 		haxe.root.Array out = new haxe.root.Array();
+		//line 8 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		sys.io.FileInput file = null;
 		//line 9 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 		if (( ((java.lang.Object) (((java.lang.Class) (haxe.root.Type.getClass(haxe.lang.Runtime.toString(input))) )) ) == ((java.lang.Object) (java.lang.String.class) ) )) 
 		{
 			//line 11 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 			_file = sys.io.File.read(haxe.lang.Runtime.toString(input), null);
+			//line 11 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+			file = ((sys.io.FileInput) (_file) );
 		}
 		
-		//line 13 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
-		sys.io.FileInput file = ((sys.io.FileInput) (_file) );
-		//line 16 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		//line 14 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		java.lang.String pk = "";
+		//line 15 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 		while (true)
 		{
-			//line 18 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
-			java.lang.String pk = fileFactory.InputTools.tryReadLine(file);
-			//line 19 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
-			if (haxe.lang.Runtime.valEq(pk, fileFactory.Common.EOF)) 
+			//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+			java.lang.String tmp = null;
+			//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+			try 
 			{
-				//line 22 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
-				return out;
+				//line 19 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				pk = file.readLine();
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				tmp = pk;
+			}
+			catch (java.lang.Throwable __temp_catchallException1)
+			{
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				haxe.lang.Exceptions.setException(__temp_catchallException1);
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				java.lang.Object __temp_catchall2 = __temp_catchallException1;
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				if (( __temp_catchall2 instanceof haxe.lang.HaxeException )) 
+				{
+					//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+					__temp_catchall2 = ((haxe.lang.HaxeException) (__temp_catchallException1) ).obj;
+				}
+				
+				//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				if (( __temp_catchall2 instanceof haxe.io.Eof )) 
+				{
+					//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+					haxe.io.Eof e = ((haxe.io.Eof) (__temp_catchall2) );
+					//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+					{
+						//line 23 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+						pk = fileFactory.Common.EOF;
+						//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+						tmp = pk;
+					}
+					
+				}
+				else
+				{
+					//line 17 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+					throw haxe.lang.HaxeException.wrap(__temp_catchallException1);
+				}
+				
 			}
 			
-			//line 24 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+			
+			//line 15 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+			if ( ! (( ! (haxe.lang.Runtime.valEq(tmp, fileFactory.Common.EOF)) )) ) 
+			{
+				//line 15 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+				break;
+			}
+			
+			//line 27 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
 			out.push(pk);
 		}
 		
+		//line 29 "C:\\Haxe Projects\\hxXmlAIJT\\src\\fileFactory\\CSV.hx"
+		return out;
 	}
 	
 	

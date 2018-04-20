@@ -22,22 +22,6 @@ namespace haxe.io {
 		}
 		
 		
-		public virtual string readUntil(int end) {
-			global::haxe.io.BytesBuffer buf = new global::haxe.io.BytesBuffer();
-			int last = default(int);
-			while (true) {
-				last = this.readByte();
-				if ( ! ((( last != end ))) ) {
-					break;
-				}
-				
-				( buf.b as global::System.IO.Stream ).WriteByte(((byte) (last) ));
-			}
-			
-			return buf.getBytes().toString();
-		}
-		
-		
 		public virtual string readLine() {
 			unchecked {
 				global::haxe.io.BytesBuffer buf = new global::haxe.io.BytesBuffer();
@@ -98,12 +82,6 @@ namespace haxe.io {
 					}
 					
 					
-					case 2010580328:
-					{
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readUntil", 2010580328)) );
-					}
-					
-					
 					case 1763375486:
 					{
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readByte", 1763375486)) );
@@ -127,12 +105,6 @@ namespace haxe.io {
 					case 1873474154:
 					{
 						return this.readLine();
-					}
-					
-					
-					case 2010580328:
-					{
-						return this.readUntil(((int) (global::haxe.lang.Runtime.toInt(dynargs[0])) ));
 					}
 					
 					

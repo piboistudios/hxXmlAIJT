@@ -13,7 +13,7 @@
 
 HX_LOCAL_STACK_FRAME(_hx_pos_f91efbe464ffa0bc_8_genOut,"HxXmlAIJT","genOut",0x9adde9f3,"HxXmlAIJT.genOut","HxXmlAIJT.hx",8,0x8414c4a5)
 HX_LOCAL_STACK_FRAME(_hx_pos_f91efbe464ffa0bc_12_convertArray,"HxXmlAIJT","convertArray",0x78dc847b,"HxXmlAIJT.convertArray","HxXmlAIJT.hx",12,0x8414c4a5)
-HX_LOCAL_STACK_FRAME(_hx_pos_f91efbe464ffa0bc_26_run,"HxXmlAIJT","run",0x0e1ee016,"HxXmlAIJT.run","HxXmlAIJT.hx",26,0x8414c4a5)
+HX_LOCAL_STACK_FRAME(_hx_pos_f91efbe464ffa0bc_27_run,"HxXmlAIJT","run",0x0e1ee016,"HxXmlAIJT.run","HxXmlAIJT.hx",27,0x8414c4a5)
 
 void HxXmlAIJT_obj::__construct() { }
 
@@ -51,29 +51,31 @@ HXDLIN(  14)			int _g = input->get_length();
 HXDLIN(  14)			while((_g1 < _g)){
 HXLINE(  14)				_g1 = (_g1 + (int)1);
 HXDLIN(  14)				int i = (_g1 - (int)1);
-HXLINE(  16)				 ::Xml pk = ::Xml_obj::parse(HX_("<jr></jr>",e9,c5,93,19))->firstElement();
-HXLINE(  17)				pk->set(HX_("index",12,9b,14,be),::Std_obj::string(i));
+HXLINE(  16)				 ::Xml pk = null();
+HXLINE(  17)				pk = ::Xml_obj::parse(HX_("<jr></jr>",e9,c5,93,19))->firstElement();
+HXDLIN(  17)				 ::Xml _hx_tmp = pk;
+HXDLIN(  17)				_hx_tmp->set(HX_("index",12,9b,14,be),::Std_obj::string(i));
 HXLINE(  18)				{
-HXLINE(  18)					bool _hx_tmp;
+HXLINE(  18)					bool _hx_tmp1;
 HXDLIN(  18)					if ((pk->nodeType != ::Xml_obj::Document)) {
-HXLINE(  18)						_hx_tmp = (pk->nodeType != ::Xml_obj::Element);
+HXLINE(  18)						_hx_tmp1 = (pk->nodeType != ::Xml_obj::Element);
             					}
             					else {
-HXLINE(  18)						_hx_tmp = false;
+HXLINE(  18)						_hx_tmp1 = false;
             					}
-HXDLIN(  18)					if (_hx_tmp) {
+HXDLIN(  18)					if (_hx_tmp1) {
 HXLINE(  18)						HX_STACK_DO_THROW((HX_("Bad node type, expected Element or Document but found ",a0,d6,ba,79) + pk->nodeType));
             					}
 HXDLIN(  18)					 ::Xml _this = pk->children->__get((int)0).StaticCast<  ::Xml >();
 HXDLIN(  18)					::String v = ::Std_obj::string(input->__get(i));
-HXDLIN(  18)					bool _hx_tmp1;
+HXDLIN(  18)					bool _hx_tmp2;
 HXDLIN(  18)					if ((_this->nodeType != ::Xml_obj::Document)) {
-HXLINE(  18)						_hx_tmp1 = (_this->nodeType == ::Xml_obj::Element);
+HXLINE(  18)						_hx_tmp2 = (_this->nodeType == ::Xml_obj::Element);
             					}
             					else {
-HXLINE(  18)						_hx_tmp1 = true;
+HXLINE(  18)						_hx_tmp2 = true;
             					}
-HXDLIN(  18)					if (_hx_tmp1) {
+HXDLIN(  18)					if (_hx_tmp2) {
 HXLINE(  18)						HX_STACK_DO_THROW((HX_("Bad node type, unexpected ",be,79,d5,11) + _this->nodeType));
             					}
 HXDLIN(  18)					_this->nodeValue = v;
@@ -81,8 +83,9 @@ HXDLIN(  18)					_this->nodeValue = v;
 HXLINE(  19)				joinTable->addChild(pk);
             			}
             		}
-HXLINE(  21)		 ::Xml xmlData = ::Xml_obj::createElement(HX_("XmlData",81,4f,ca,3c));
-HXLINE(  22)		xmlData->addChild(joinTable);
+HXLINE(  21)		 ::Xml xmlData = null();
+HXLINE(  22)		xmlData = ::Xml_obj::createElement(HX_("XmlData",81,4f,ca,3c));
+HXDLIN(  22)		xmlData->addChild(joinTable);
 HXLINE(  23)		::HxXmlAIJT_obj::out->addChild(xmlData);
             	}
 
@@ -90,10 +93,10 @@ HXLINE(  23)		::HxXmlAIJT_obj::out->addChild(xmlData);
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(HxXmlAIJT_obj,convertArray,(void))
 
  ::Xml HxXmlAIJT_obj::run(::cpp::VirtualArray input){
-            	HX_STACKFRAME(&_hx_pos_f91efbe464ffa0bc_26_run)
-HXLINE(  27)		::HxXmlAIJT_obj::genOut();
-HXLINE(  28)		::HxXmlAIJT_obj::convertArray(input);
-HXLINE(  29)		return ::HxXmlAIJT_obj::out;
+            	HX_STACKFRAME(&_hx_pos_f91efbe464ffa0bc_27_run)
+HXLINE(  28)		::HxXmlAIJT_obj::genOut();
+HXLINE(  29)		::HxXmlAIJT_obj::convertArray(input);
+HXLINE(  30)		return ::HxXmlAIJT_obj::out;
             	}
 
 
