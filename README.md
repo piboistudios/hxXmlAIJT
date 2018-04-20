@@ -9,4 +9,5 @@ You would simply drop the spreadsheet into hxXmlAIJT and then query all of the P
 
 ## To Do
 - Add regular expression formatting so that the Xml datasets look decent.
-- Allow for multiple primary keys in input.
+- Allow additional columns in input.
+- 
